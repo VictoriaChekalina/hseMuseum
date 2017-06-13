@@ -1,0 +1,17 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Body:</strong>
+  <%= @annotation.body %>
+</p>
+
+<p>
+  <strong>Gallery:</strong>
+  <%= @annotation.gallery_id %>
+</p>
+
+<% if can? :update, Annotation %>
+  <%= link_to 'Edit', edit_annotation_path(@annotation) %> |
+<% end %>
+
+<%= link_to 'Back', annotations_path %>
